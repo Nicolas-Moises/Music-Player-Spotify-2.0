@@ -26,7 +26,7 @@ const Discover = () => {
                     id=""
                     onChange={() => {}}
                     value=""
-                    className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
+                    className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5 "
                 >
                     {genres.map((genre) => (
                         <option key={genre.value} value={genre.value}>
@@ -37,7 +37,14 @@ const Discover = () => {
             </div>
             <div className="flex flex-wrap sm:justify-start justify-center gap-8">
                 {data?.map((song, i) => (
-                    <SongCard key={song.key} song={song} i={i} />
+                    <SongCard
+                        key={song.key}
+                        song={song}
+                        isPlaying={isPlaying}
+                        activeSong={activeSong}
+                        data={data}
+                        i={i}
+                    />
                 ))}
             </div>
         </div>
