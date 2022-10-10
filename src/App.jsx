@@ -21,7 +21,7 @@ const App = () => {
             <div className="flex-1 flex flex-col bg-[#121212] m-2 rounded-lg">
                 <Searchbar />
 
-                <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
+                <div className="px-6 h-[calc(100vh-40px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
                     <div className="flex-1 h-fit pb-40">
                         <Routes>
                             <Route path="/" element={<Discover />} />
