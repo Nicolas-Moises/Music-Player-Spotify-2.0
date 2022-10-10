@@ -11,7 +11,7 @@ const Discover = () => {
     const { data, isFetching, error } = useGetTopChartsQuery();
     const genreTitle = "Pop";
 
-    if (isFetching) return <Loader title="Carregando músicas..." />;
+    if (isFetching) return <Loader title="Carregando..." />;
     if (error) return <Error />;
 
     console.log(data);
@@ -26,7 +26,7 @@ const Discover = () => {
                     id=""
                     onChange={() => {}}
                     value=""
-                    className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5 "
+                    className="bg-[#000] text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5 "
                 >
                     {genres.map((genre) => (
                         <option key={genre.value} value={genre.value}>
