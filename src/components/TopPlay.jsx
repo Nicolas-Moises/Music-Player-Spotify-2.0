@@ -83,7 +83,7 @@ const TopPlay = () => {
             <div className="w-full flex flex-col">
                 <div className="flex flex-row justify-between items-center">
                     <h2 className="text-white font-bold font-sora text-xl">
-                        Top Álbuns
+                        Mais ouvidas
                     </h2>
                     <Link to="/top-charts">
                         <p className="text-gray-300 text-sm cursor-pointer">
