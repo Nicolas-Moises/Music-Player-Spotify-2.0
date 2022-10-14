@@ -12,4 +12,7 @@ $ npm install -> Download the dependencies
 
 Enjoy the web app, search for bands, artists, musics, listen the previows of the musics for 1minutes29seconds. 
 
+# Or,you can access the web site on the link below
+    https://spotifycloneshazam.netlify.app/
+    
 ## Soon more features :)
