@@ -21,9 +21,9 @@ const TopChartCard = ({
 }) => (
     <div
         className="w-full flex flex-row items-center hover:bg-[#4c426e]
-  py-2 p-4 rounded-lg cursor-pointer mb-1"
+  py-1 px-4 rounded-lg cursor-pointer mb-1"
     >
-        <h3 className="font-sora font-bold text-sm text-white mr-3">
+        <h3 className="font-sora font-bold text-xs text-white mr-3">
             {i + 1}.
         </h3>
         <div className="flex-1 flex flex-row justify-between items-center">
@@ -78,15 +78,15 @@ const TopPlay = () => {
     return (
         <div
             ref={divRef}
-            className="xl:ml-6 ml-0 xl:mb-0 mb-6 flex-1 xl:max-w-[400px] max-w-full flex"
+            className="xl:ml-6 ml-0 xl:mb-0 mb-2 flex-1 xl:max-w-[400px] max-w-full flex"
         >
             <div className="w-full flex flex-col">
                 <div className="flex flex-row justify-between items-center">
-                    <h2 className="text-white font-bold font-sora text-xl">
+                    <h2 className="text-white font-bold font-sora text-lg">
                         Mais ouvidas
                     </h2>
                     <Link to="/top-charts">
-                        <p className="text-gray-300 text-sm cursor-pointer">
+                        <p className="text-gray-300 text-xs cursor-pointer">
                             Ver mais
                         </p>
                     </Link>
@@ -105,13 +105,13 @@ const TopPlay = () => {
                         />
                     ))}
                 </div>
-                <div className="w-full flex flex-col mt-8">
+                <div className="w-full flex flex-col mt-4">
                     <div className="flex flex-row justify-between items-center">
-                        <h2 className="text-white font-bold font-sora text-xl">
+                        <h2 className="text-white font-bold font-sora  text-lg">
                             Top Artistas
                         </h2>
                         <Link to="/top-artists">
-                            <p className="text-gray-300 text-sm cursor-pointer">
+                            <p className="text-gray-300 text-xs cursor-pointer">
                                 Ver mais
                             </p>
                         </Link>

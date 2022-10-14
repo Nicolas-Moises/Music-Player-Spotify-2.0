@@ -4,6 +4,8 @@ import axios from 'axios';
 
 import { useSelector } from 'react-redux';
 
+import { useGetSongsByCountryQuery } from '../redux/services/shazamCore';
+
 import { Error, Loader, SongCard } from '../components';
 
 const AroundYou = () => {
@@ -12,18 +14,39 @@ const AroundYou = () => {
     const [loading, setloading] = useState(true);
     const { activeSong, isPlaying } = useSelector((state) => state.player);
 
+
+    const { data, isFetching, error} = useGetSongsByCountryQuery(country);
+    console.log(country)
+
     useEffect(() => {
-      first
-    
-      return () => {
-        second
-      }
+      axios.get(`https://geo.ipify.org/api/v2/country?apiKey=at_uBj7CO9XLhfhnvNNj5SEaxbyJ36v0&`).
+      then((res) => setcountry(res?.data?.location?.country))
+      .catch((err) => console.log(err))
+      .finally(() => setloading(false))
     }, [country])
     
+    if(isFetching && loading) return <Loader title="Carregando músicas" />
+  
+    if(error && country) return <Error />
 
     return (
-        <div>
-            AroundYou
+        <div className='flex flex-col'>
+            <h2 className='font-bold text-2xl text-white text-left mt-4 mb-10'>
+              Músicas para você
+            </h2>
+
+            <div className='flex flex-wrap sm:justify-start justify-center gap-6'>
+              {data?.map((song, i) => (
+                <SongCard 
+                  key={song.key}
+                  song={song}
+                  isPlaying={isPlaying}
+                  activeSong={activeSong}
+                  data={data}
+                  i={i}
+                />
+              ))}
+            </div>
         </div>
     )
 }

@@ -26,7 +26,7 @@ const Sidebar = () => {
 
     return (
         <>
-            <div className="md:flex hidden flex-col w-[200px] py-10 px-4 bg-[#121212] rounded-lg m-2">
+            <div className="md:flex hidden flex-col w-[200px] py-10 px-4 bg-[#000] rounded-lg">
                 <img
                     src={logo}
                     alt="logo"
